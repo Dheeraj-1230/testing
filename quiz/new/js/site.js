@@ -1,4 +1,3 @@
-
 let questions = [
     {
       id: 1,
@@ -126,9 +125,9 @@ let questions = [
   let points = 0;
   let cquestion=0;
   let wquestion=0;
-  let arr=[1,2,3,4,5,6,7,8,9,10];
-  arr=arr.sort(() => Math.random()-0.5);
-  let i=0;
+  // let arr=[1,2,3,4,5,6,7,8,9,10];
+  questions=questions.sort(() => Math.random()-0.5);
+  // let i=0;
   // arr=shuffle(arr);
   window.onload = function() {
     show(question_count);
@@ -176,14 +175,14 @@ let questions = [
     question_count--;
     show(question_count);
   }
-
+let cnt=0;
 
   function show(count) {
   
     let question = document.getElementById("questions");
     let [first, second, third, fourth] =(questions[count].options);
     question.innerHTML = `
-    <h2>Q${count + 1}. ${questions[count].question}</h2>
+    <h2>Q${cnt + 1}. ${questions[count].question}</h2>
      <ul class="option_group">
     <li class="option">${first}</li>
     <li class="option">${second}</li>
@@ -191,7 +190,8 @@ let questions = [
     <li class="option">${fourth}</li>
   </ul> 
     `;
-    i++;
+    // i++;
+    cnt++;
     toggleActive();
   }
   // function submt(){
@@ -266,42 +266,53 @@ let questions = [
     // alert(numberq);
     if(numberq=='one'){
     question_count=0;
+    cnt=0;
     show(question_count);
     }
     else if(numberq=='two'){
       question_count=1;
+      cnt=1;
     show(question_count);
     }
     else if(numberq=='three'){
       question_count=2;
+      cnt=2;
     show(question_count);
+    
   }
     else if(numberq=='four'){
       question_count=3;
+      cnt=3;
     show(question_count);
   }
     else if(numberq=='five'){
       question_count=4;
+      cnt=4;
     show(question_count);
   }
     else if(numberq=='six'){
       question_count=5;
+      cnt=5;
     show(question_count);
   }
     else if(numberq=='seven'){
       question_count=6;
+      cnt=6;
     show(question_count);
   }
     else if(numberq=='eight'){
       question_count=7;
+      cnt=7;
     show(question_count);
   }
     else if(numberq=='nine'){
       question_count=8;
+      cnt=8;
     show(question_count);
   }
     else if(numberq=='ten'){
       question_count=9;
+      cnt=9;
     show(question_count);
   }
 
